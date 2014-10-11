@@ -1,7 +1,3 @@
-<?php
-	header( 'Location: gop1001mem' ) ;
-?>
-
 <html>
 <head>
 	<link rel="shortcut icon" href="/images/icon.ico">

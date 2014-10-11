@@ -1,0 +1,18 @@
+body {
+    color: white;
+    background-color: black }
+a {
+    color: lightblue;
+}
+#postDiv {
+    background-color: #111111;
+    width: 600px;
+    margin: 0 auto;
+    text-align:center; 
+}
+#navigationDiv {
+    background-color: #222222;
+    width: 600px;
+    margin: 0 auto;
+    text-align:center; 
+}

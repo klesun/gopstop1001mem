@@ -4,10 +4,6 @@
 	ini_set('display_errors',1);
 	error_reporting(-1);
 */
-	mysql_connect('localhost', 'root', 'Yuzefa');
-	$sql = 'USE mem1001;';
-	mysql_query($sql);
-
 	function getListBySql($sql) {
 		$answ = mysql_query($sql);
 		$list = array();
@@ -15,8 +11,9 @@
 		while ($row = mysql_fetch_assoc($answ)) {
 			foreach ($row as $key => $value) $list[$i][$key] = $value;
 			++$i;
+			if ($i % 10000 == 0) print($i.' Mem. '.(memory_get_usage()/1000000).PHP_EOL);
 		}
 		return $list;
 	}
-	
+
 ?>
