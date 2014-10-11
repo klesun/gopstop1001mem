@@ -1,0 +1,10 @@
+<script>
+	var myObject = ['penis', 'huj', 'pizda'];
+	var str_json = JSON.stringify(myObject);
+	request = new XMLHttpRequest();
+	request.open("POST", "server.php", true);
+	request.setRequestHeader("Content-type", "application/json");
+	request.send(str_json);
+	
+	alert('Otpravil tipa');
+</script>

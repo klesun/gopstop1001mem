@@ -1,0 +1,1386 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<!-- Meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Новые | Новости - Приколы - Комиксы - Мемы</title>
+	<meta name="description" content="Ищите свежие новости, новые приколы, мемы и комиксы? - тогда Вам сюда!" />
+	<meta name="keywords" content="Новые новости, новые приколы, новые мемы, новые комиксы, свежие новости, новейшие мемы, новые шаблоны, новейшие приколы, новенькие комиксы" />
+
+	<!-- OG Tags -->
+		<meta property="vk:app_id" content="2694307" />
+		<meta property="fb:admins" content="1341124907" />
+		<meta property="og:title" content="Новые | Новости - Приколы - Комиксы - Мемы" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://1001mem.ru/new/20" />
+		<meta property="og:site_name" content="1001 Мем" />
+		<meta property="og:image" content="http://s.1001mem.ru//images/apple-touch-icon-114x114.png" />
+	
+	<!-- Styles -->
+	<link type="text/css" href="http://s.1001mem.ru/thirdparty/bootstrap-3.2.0/css/bootstrap.min.css?493686" rel="stylesheet" media="all" />
+	<link type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="http://s.1001mem.ru/v2/css/common.css?493686" rel="stylesheet" media="all" />
+	
+	<!-- Javascript -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://s.1001mem.ru/thirdparty/bootstrap-3.2.0/js/bootstrap.min.js?493686"></script>
+	<script type="text/javascript" src="http://s.1001mem.ru/v2/js/jquery.scrollto.js?493686"></script>
+	<script type="text/javascript" src="http://s.1001mem.ru/v2/js/mem.js?493686"></script>
+	
+	<!-- Fav and Touch icons -->
+	<link rel="shortcut icon" href="http://s.1001mem.ru/v2/img/favicon.ico" type="image/png" />
+	<link rel="apple-touch-icon" href="http://s.1001mem.ru/v2/img/apple-57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://s.1001mem.ru/v2/img/apple-72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://s.1001mem.ru/v2/img/apple-114.png">
+
+	<script type="text/javascript">
+		//FunPosts.is_logged = false;
+
+		$(document).ready(function(){
+			// Ajax Modals
+			Mem.Modal.bindAjaxEvents();
+
+					});
+	</script>
+</head>
+<body>
+
+<!-- VK API (must be here) -->
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?45"></script>
+<script type="text/javascript">
+	VK.init({apiId: 2694307});
+</script>
+
+<!-- Navigation -->
+<div class="navbar navbar-primary" role="navigation">
+	<div class="container">
+
+		<!-- Logo -->
+		<a class="navbar-brand" href="/">1001 Мем</a>
+
+		<!-- User Navigation -->
+		<ul class="nav nav-pills nav-user">
+
+			<li class="signup dropdown">
+			<a href="/signup" data-toggle="dropdown"><b>Зарегистрироваться</b></a>
+			<div class="dropdown-menu dropdown-menu-right dropdown-signin">
+				<h5>Выберите социальную сеть</h5>
+				<div class="signInServices short clearfix">
+					<a class="btn-signin btn-signin-vk" href="#" onclick="Mem.Auth.popup('vk', ''); return false">
+						<div class="logo_wrapper"><span class="logo"></span></div>
+					</a>
+					<a class="btn-signin btn-signin-ok" href="#" onclick="Mem.Auth.popup('ok', ''); return false">
+						<div class="logo_wrapper"><span class="logo"></span></div>
+					</a>
+					<a class="btn-signin btn-signin-fb" href="#" onclick="Mem.Auth.popup('fb', ''); return false">
+						<div class="logo_wrapper"><span class="logo"></span></div>
+					</a>
+				</div>
+				<div class="tip">
+					Регистрация на 1001мем возможна только через социальные сети.
+				</div>
+			</div>
+		</li>
+		<li class="signin dropdown">
+			<a href="/signin" data-toggle="dropdown">Войти</a>
+			<div class="dropdown-menu dropdown-menu-right dropdown-signin">
+				<div id="signinSocialWrap">
+					<h5>Выберите социальную сеть</h5>
+					<div class="signInServices short clearfix">
+						<a class="btn-signin btn-signin-vk" href="#" onclick="Mem.Auth.popup('vk', ''); return false">
+							<div class="logo_wrapper"><span class="logo"></span></div>
+						</a>
+						<a class="btn-signin btn-signin-ok" href="#" onclick="Mem.Auth.popup('ok', ''); return false">
+							<div class="logo_wrapper"><span class="logo"></span></div>
+						</a>
+						<a class="btn-signin btn-signin-fb" href="#" onclick="Mem.Auth.popup('fb', ''); return false">
+							<div class="logo_wrapper"><span class="logo"></span></div>
+						</a>
+					</div>
+					<div class="divider"></div>
+					<div class="formToggle">
+						<a href="javascript:;" id="signinFormToggle">Войти, используя логин и пароль</a>
+					</div>
+				</div>
+				<div id="signinFormWrap" style="display:none">
+					<form action="/signin?form=1" method="post" role="form">
+						<input type="hidden" name="token" value="9b37eddc189110c32fa2c8434caef7748184724e" />
+						<div class="form-group">
+							<label for="signinEmail">Логин или Е-Майл</label>
+							<input type="text" name="username" class="form-control" id="signinEmail" tabindex="1">
+						</div>
+						<div class="form-group">
+							<label for="signinPassword">Пароль (<a href="/reset" style="font-weight:normal" tabindex="4">Забыли?</a>)</label>
+							<input type="password" name="password" class="form-control" id="signinPassword" tabindex="2">
+						</div>
+						<button type="submit" class="btn btn-primary" tabindex="3">Войти</button>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$(function(){
+						$('#signinFormToggle').click(function(e){
+							e.stopPropagation();
+							$('#signinSocialWrap').fadeOut(200, function(){
+								$('#signinFormWrap').fadeIn(200);
+								document.getElementById('signinEmail').focus();
+							});
+						});
+						$('#signinFormWrap').on('keyup',function(e){e.stopPropagation()});
+					});
+				</script>
+			</div>
+		</li>
+
+	</ul>
+
+<!-- Notifications -->
+
+		<!-- Site Navigation -->
+		<ul class="nav nav-pills pull-left">
+			<li class=""><a href="/upload" class="upload"><i class="fa fa-cloud-upload"></i> Добавить</a></li>
+			<li class="dropdown ">
+				<a href="javascript:;" class="create" data-toggle="dropdown"><i class="fa fa-magic"></i> Создать <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-left" role="menu">
+					<li><a href="/create_meme"><i class="glyphicon glyphicon-picture"></i> Создать Мем</a></li>
+					<li><a href="/create_prikol"><i class="glyphicon glyphicon-fullscreen"></i> Создать Прикол</a></li>
+					<li><a href="/create_comics"><i class="glyphicon glyphicon-th-large"></i> Создать Комикс</a></li>
+				</ul>
+			</li>
+			<!--
+			<li class=""><a href="http://igromem.ru/play" class="play" target="_blank"><i class="fa fa-flash"></i> Играть</a></li>
+			-->
+		</ul>
+
+	</div>
+</div>
+
+<!-- Content -->
+<div class="content-main">
+
+	<!-- Secondary Navigation -->
+<div class="navbar navbar-secondary" role="navigation">
+	<div class="container">
+
+		<ul class="nav navbar-nav nav-controllers">
+						
+							<li class=""><a href="/">Лучшие</a></li>
+			
+			<li class="active"><a href="/new">Новые</a></li>
+
+			
+			<li class=" dropdown pull-right">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Топ <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="/top_day">Топ Дня</a></li>
+					<li><a href="/top_week">Топ Недели</a></li>
+					<li><a href="/top_month">Топ Месяца</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-search pull-right">
+			<li class="search">
+				<form method="get" action="/search" role="search" id="formSearch">
+					<div class="input-group">
+						<input type="text" name="q" class="form-control" placeholder="Поиск по сайту..." >
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
+				<script>
+					$(function(){
+						$('#formSearch').find('input').keyup(function(e){
+							e.stopPropagation();
+						})
+					})
+				</script>
+			</li>
+		</ul>
+
+	</div>
+</div>
+
+<!-- Реклама -->
+<div class="container adbanner">
+<div class="row">
+<div class="col-xs-12">
+<div style="text-align:center">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 1001Mem (Широкий) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-3014328289142307"
+     data-ad-slot="4611426500"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+</div>
+</div>
+</div>
+<!-- VK SHARE -->
+<div class="modal fade" id="vkSharePost">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body" style="text-align: center">
+				<div style="margin: 20px 0;">
+					<a href="javascript:void(0)" class="share-vk"><i class="fa fa-fw fa-vk"></i></a>
+				</div>
+				<div class="alert alert-danger app-not-installed" style="display:none">Для публикации картинки необходимо установить приложение.</div>
+				<div class="alert alert-info app-install" style="display:none">Нажмите на кнопку, чтобы установить приложение и поделиться картинкой.</div>
+				<div class="alert alert-info image-uploaded" style="display:none">Нажмите еще раз на кнопку для публикации.</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-9 col-content">
+			<div class="content-wrap">
+
+
+			<!-- Посты -->
+			
+				<section class="posts">
+					<article id="p3576038" data-id="3576038" data-url="http://1001mem.ru/p3576038" data-title="пес" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3576038" target="_blank">пес</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>48</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1371511">u1371511</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3576038" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3577000/3576038.jpg" alt="пес" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3576038#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3576038#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+						<li><a href="javascript:;" class="report" data-toggle="tooltip" data-placement="bottom" title="Пожаловаться"><i class="fa fa-fw fa-warning"></i></a></li>
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3576032" data-id="3576032" data-url="http://1001mem.ru/p3576032" data-title="Друзья" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3576032" target="_blank">Друзья</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>46</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1371650">u1371650</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3576032" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3577000/3576032.jpg" alt="Друзья" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3576032#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3576032#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+						<li><a href="javascript:;" class="report" data-toggle="tooltip" data-placement="bottom" title="Пожаловаться"><i class="fa fa-fw fa-warning"></i></a></li>
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3576012" data-id="3576012" data-url="http://1001mem.ru/p3576012" data-title="быдыщь врх-вхры*" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3576012" target="_blank">быдыщь врх-вхры*</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>160</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1367604">u1367604</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3576012" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3577000/3576012.jpg" alt="быдыщь врх-вхры*" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3576012#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3576012#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3576005" data-id="3576005" data-url="http://1001mem.ru/p3576005" data-title="Покайся" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3576005" target="_blank">Покайся</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>131</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/Nyancrafter">Nyancrafter</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3576005" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3577000/3576005.jpg" alt="Покайся" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3576005#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3576005#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3576003" data-id="3576003" data-url="http://1001mem.ru/p3576003" data-title="Что-то пошло не так" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3576003" target="_blank">Что-то пошло не так</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>141</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/MaksimR">MaksimR</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3576003" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3577000/3576003.jpg" alt="Что-то пошло не так" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3576003#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3576003#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575970" data-id="3575970" data-url="http://1001mem.ru/p3575970" data-title="эхбатя" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575970" target="_blank">эхбатя</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>113</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/Ribulya">Ribulya</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575970" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575970.jpg" alt="эхбатя" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575970#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575970#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575945" data-id="3575945" data-url="http://1001mem.ru/p3575945" data-title="Лета" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575945" target="_blank">Лета</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>131</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1371615">u1371615</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575945" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575945.jpg" alt="Лета" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575945#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575945#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575941" data-id="3575941" data-url="http://1001mem.ru/p3575941" data-title="Зло не дремлет" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575941" target="_blank">Зло не дремлет</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>156</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/selderey">selderey</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575941" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575941.jpg" alt="Зло не дремлет" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575941#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575941#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575939" data-id="3575939" data-url="http://1001mem.ru/p3575939" data-title="уважаю" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575939" target="_blank">уважаю</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>128</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1230705">u1230705</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575939" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575939.jpg" alt="уважаю" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575939#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575939#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575884" data-id="3575884" data-url="http://1001mem.ru/p3575884" data-title="......" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575884" target="_blank">......</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>154</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1291662">u1291662</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575884" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575884.jpg" alt="......" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575884#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575884#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575857" data-id="3575857" data-url="http://1001mem.ru/p3575857" data-title="никто не пишет(" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575857" target="_blank">никто не пишет(</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>95</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/kinderpingvi45481">kinderpingvi45481</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575857" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575857.jpg" alt="никто не пишет(" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575857#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575857#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575840" data-id="3575840" data-url="http://1001mem.ru/p3575840" data-title="матч (Финал )" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575840" target="_blank">матч (Финал )</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>27</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/u1298206">u1298206</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575840" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575840.jpg" alt="матч (Финал )" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575840#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575840#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+						<li><a href="javascript:;" class="report" data-toggle="tooltip" data-placement="bottom" title="Пожаловаться"><i class="fa fa-fw fa-warning"></i></a></li>
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575834" data-id="3575834" data-url="http://1001mem.ru/p3575834" data-title="5-0" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575834" target="_blank">5-0</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>121</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/kinderpingvi45481">kinderpingvi45481</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575834" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575834.jpg" alt="5-0" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575834#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575834#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575814" data-id="3575814" data-url="http://1001mem.ru/p3575814" data-title="N22" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575814" target="_blank">N22</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>142</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/Xy94u_Na_Da4y_MLP">Xy94u_Na_Da4y_MLP</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575814" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575814.jpg" alt="N22" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575814#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575814#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575813" data-id="3575813" data-url="http://1001mem.ru/p3575813" data-title="N21" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575813" target="_blank">N21</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>103</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/Xy94u_Na_Da4y_MLP">Xy94u_Na_Da4y_MLP</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575813" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575813.jpg" alt="N21" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575813#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575813#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575809" data-id="3575809" data-url="http://1001mem.ru/p3575809" data-title="N18" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575809" target="_blank">N18</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>150</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/Xy94u_Na_Da4y_MLP">Xy94u_Na_Da4y_MLP</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575809" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575809.jpg" alt="N18" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575809#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575809#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575805" data-id="3575805" data-url="http://1001mem.ru/p3575805" data-title="убрать надо" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575805" target="_blank">убрать надо</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>100</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/Ion_Melnic">Ion_Melnic</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575805" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575805.jpg" alt="убрать надо" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575805#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575805#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575769" data-id="3575769" data-url="http://1001mem.ru/p3575769" data-title="эх..." class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575769" target="_blank">эх...</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>152</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/kinderpingvi45481">kinderpingvi45481</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575769" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575769.jpg" alt="эх..." />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575769#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575769#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575768" data-id="3575768" data-url="http://1001mem.ru/p3575768" data-title="ава" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575768" target="_blank">ава</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>132</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/kinderpingvi45481">kinderpingvi45481</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575768" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575768.jpg" alt="ава" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575768#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575768#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+<article id="p3575767" data-id="3575767" data-url="http://1001mem.ru/p3575767" data-title="секса всем" class="">
+	<header>
+		<h2>
+			<a href="http://1001mem.ru/p3575767" target="_blank">секса всем</a>
+		</h2>
+		<small>
+			<span class="score plus">
+				<i class="fa"></i> <span>163</span>
+			</span>
+						<i class="fa fa-user"></i> <a href="http://1001mem.ru/kinderpingvi45481">kinderpingvi45481</a>
+					</small>
+	</header>
+	<div class="body clearfix" style="">
+		<div class="image">
+			<a href="http://1001mem.ru/p3575767" target="_blank">
+				<img src="http://img.1001mem.ru/posts/3576000/3575767.jpg" alt="секса всем" />
+			</a>
+					</div>
+		<aside>
+			<ul class="actions vertical">
+				<li><a href="#" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+				<li><a href="#" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+				<li><a href="http://1001mem.ru/p3575767#comments" data-toggle="tooltip" data-placement="right" class="comment"  target="_blank" title="Посмотреть комментарии"><i class="fa fa-comments"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="right" class="vk" title="Добавить на стену"><i class="fa fa-fw fa-vk"></i></a></li>
+			</ul>
+			<ul class="actions longpost">
+				<li><a href="javascript:;"><i class="fa fa-minus"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></li>
+				<li><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer>
+		<ul class="actions horizontal clearfix">
+			<li><a href="javascript:;" class="like "><i class="fa fa-thumbs-o-up"></i></a></li>
+			<li><a href="javascript:;" class="dislike "><i class="fa fa-thumbs-o-down"></i></a></li>
+			<li><a href="http://1001mem.ru/p3575767#comments" class="comment" target="_blank"><i class="fa fa-comments"></i></a></li>
+			<li><a href="javascript:;" class="vk"><i class="fa fa-fw fa-vk"></i></a></li>
+
+			
+			<li style=""><a href="#" class="minimize" data-toggle="tooltip" data-placement="bottom" title="Свернуть"><i class="fa fa-minus"></i></a></li>
+			<li style="display:none"><a href="#" class="maximize" data-toggle="tooltip" data-placement="bottom" title="Развернуть"><i class="fa fa-plus"></i></a></li>
+
+			
+					</ul>
+	</footer>
+</article>
+				</section>
+
+				<!-- Pagination -->
+				<div class="pagination clearfix">
+			<a href="/new/19" class="btn btn-primary btn-lg">&laquo; Новее</a>
+	
+			<a href="/new/21" class="btn btn-primary btn-lg">Старее &raquo;</a>
+	</div>
+
+			
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div class="col-xs-3 col-sidebar">
+			<!-- Реклама -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 1001Мем (Новый) -->
+<ins class="adsbygoogle"
+	 style="display:inline-block;width:300px;height:250px;margin-bottom:20px;"
+	 data-ad-client="ca-pub-3014328289142307"
+	 data-ad-slot="4053023303"></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div class="sidebar-block">
+	<div id="vk_groups2"></div>
+	<script type="text/javascript">
+		VK.Widgets.Group("vk_groups2", {mode: 0, width: "270", height: "290"}, 25089415);
+	</script>
+</div>
+
+<div class="sidebar-block" style="text-align:center">
+	<h4>Горячие клавиши</h4>
+	<img src="/static/v2/img/keys.png" alt="Навигация на клавиатуре">
+</div>
+
+<!--
+<div class="sidebar-block" style="text-align: center">
+	<a href="http://igromem.ru/" target="_blank">
+		<img src="http://img.1001mem.ru/ads/igromem.jpg" width="240" height="400" alt="">
+	</a>
+</div>
+-->		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var PostsRepository;
+$(document).ready(function(){
+	PostsRepository = new Mem.PostRepository($('section.posts > article'));
+	PostsRepository.enableScrollTraversing();
+	PostsRepository.enableKeyboardNavigation();
+});
+</script>
+
+
+
+</div>
+
+<!-- Footers -->
+<footer class="primary">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-xs-6">
+				<h4>О странице</h4>
+				Новые - раздел сайта <a href="http://1001mem.ru/">1001 мем</a>, где собраны все самые <a href="http://1001mem.ru/">новые мемы</a>,
+	 приколы и комиксы, а так же свежие новости со всего мира! Если у Вас появилась своя идея
+	 <a href="http://1001mem.ru/create_news">создать новость</a>, <a href="http://1001mem.ru/create_meme">создать мем</a> или
+	 <a href="http://1001mem.ru/create_comics">создать комикс</a>. Вы можете воспользоваться нашими генераторами и в режиме
+	 онлайн сделать новый юмористический контент, который может попасть в такие разделы как
+	 <a href="http://1001mem.ru/top_day">топ дня</a>, <a href="http://1001mem.ru/top_week">топ недели</a> или даже <a href="http://1001mem.ru/top_month">топ месяца</a>!			</div>
+
+			<div class="col-xs-3">
+				<h4>Наша статистика</h4>
+
+				<p>Пользователей с нами</p>
+				<div class="counter">
+					1,360,582				</div>
+
+				<p>Опубликованных постов</p>
+				<div class="counter">
+					3,558,992				</div>
+			</div>
+
+			<div class="col-xs-3">
+				<h4>Мы в социальных сетях</h4>
+
+				<span class="fa-stack">
+					<i class="fa fa-square fa-stack-2x" style="color:#2b4a69"></i>
+					<i class="fa fa-vk fa-stack-1x" style="color:#fff"></i>
+				</span>
+				<a href="http://vk.com/mem1001">Наша группа в VK</a><br>
+
+				<!--
+				<span class="fa-stack">
+					<i class="fa fa-square fa-stack-2x" style="color:#325190"></i>
+					<i class="fa fa-facebook fa-stack-1x" style="color:#fff"></i>
+				</span>
+				<a href="#">Наша страница в Facebook</a><br>
+				-->
+
+				<span class="fa-stack">
+					<i class="fa fa-square fa-stack-2x" style="color:#fe9605"></i>
+					<i class="fa fa-rss fa-stack-1x" style="color:#fff"></i>
+				</span>
+				<a href="http://1001mem.ru/?rss=1">Наша RSS лента</a>
+
+				<br><br>
+
+				<span class="fa-stack">
+					<i class="fa fa-square fa-stack-2x" style="color:#232323"></i>
+					<i class="fa fa-mobile fa-stack-1x" style="color:#fff;font-size:1.5em"></i>
+				</span>
+				<a href="http://1001mem.ru/?device=mobile">Мобильная версия</a>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+<footer class="secondary">
+	<div class="container">
+		<div class="pull-left">
+			<div class="links">
+				1001мем.ру © 2011 — 2014.
+				<a href="/copyright" target="_blank">Все права защищены.</a> |
+				<a href="/rules" target="_blank">Правила</a> |
+				<a href="/faq" target="_blank">Что такое мем?</a>
+				<!-- <a href="http://askbook.me/support_1001mem" target="_blank">Обратная cвязь</a> | -->
+			</div>
+			<small>Администрация не несет ответственности за контент опубликованный пользователями.</small>
+		</div>
+		<div class="pull-right">
+			<!--LiveInternet counter-->
+			<script type="text/javascript">document.write("<img src='//counter.yadro.ru/hit?t44.1;r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' border=0 width=31 height=31 alt=''>")</script>
+			<!--/LiveInternet-->
+
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-22922008-4']);
+				_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+		</div>
+	</div>
+</footer>
+
+
+
+<div id="stl_left">
+	<div class="stl_text"></div> <!-- id="stl_text_horiz" &uarr; Наверх -->
+	<!--<div class="stl_text" id="stl_text_verti" style="display: none">&uarr;<br /><br />Н<br />а<br />в<br />е<br />р<br />х</div>-->
+</div>
+
+
+
+<div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- AJAX Content Here -->
+		</div>
+	</div>
+</div>
+
+
+
+	<div class="modal fade" id="voteNotLoggedModal">
+		<div class="modal-body">
+			<h4 style="text-align:center">Данная функция доступна только зарегистрированным пользователям</h4>
+		</div>
+		<div class="modal-footer" style="padding-right: 185px;">
+			<a href="/signup?to=%2Fvote%2Flike%2F0" id="modalLikeSignup" class="btn btn-primary btn-large">Регистрация</a>
+			<a href="/signin?to=%2Fvote%2Flike%2F0" id="modalLikeSignin" class="btn btn-primary btn-large">Вход</a>
+		</div>
+	</div>
+
+
+</body>
+</html>
