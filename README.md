@@ -8,3 +8,13 @@ If I'm not mistaken there was also a button to rate them yourself. I remember sc
 The graph below shows the id on X axis and the amount of upvotes on the Y axis. After reading most of the posts, I'd like to note the sad fact that the further timeline goes, the lower drops the average quality of the content, as you can guess from the shape of the graph. 
 
 ![](https://raw.githubusercontent.com/klesun/gopstop1001mem/master/images/graph1001mem_1000X480.jpeg)
+
+The database with upvotes and id-s:
+
+https://github.com/klesun/gopstop1001mem/blob/master/DATA/mysqldump1001mem.sql
+
+https://github.com/klesun/gopstop1001mem/blob/master/DATA/mysqldumpMemebase.sql
+
+The scripts that crawled them:
+
+https://github.com/klesun/gopstop1001mem/tree/master/DATA/retrieveData
